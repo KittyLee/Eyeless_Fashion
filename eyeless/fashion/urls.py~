@@ -1,0 +1,8 @@
+from django.conf.urls import patterns, include, url
+from fashion.models import views
+
+urlpatterns = patterns('',
+	#Index
+	url(r'^fashion$/', views.user, name='users'),
+	url(r'^user/', 'eyeless.views.user_view'),
+)

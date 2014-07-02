@@ -1,0 +1,14 @@
+<html>
+	<head>
+		<title>Eyeles Fashion Users</title>
+	</head>
+	<body>
+These are the people seeking fashion advice:
+
+		{% for user in all_users %}
+
+		<div>{{ user.name }} {{ user.city}}</div>
+
+		{% endfor %}
+	</body>
+</html>
