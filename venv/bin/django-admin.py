@@ -1,4 +1,4 @@
-#!/home/katherineortiz/Projects/eyeless/venv/bin/python
+#!/home/katherineortiz/Projects/Eyeless_Fashion/venv/bin/python
 from django.core import management
 
 if __name__ == "__main__":
