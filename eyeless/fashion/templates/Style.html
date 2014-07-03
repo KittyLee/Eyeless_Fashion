@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<title>Eyeless Fashion Stylist</title>
+	</head>
+	<body>
+
+These are our fabulous stylist:
+
+	{% for style in all_style %}
+
+		<div><a href="{% url 'styleView' style.id %}">{{ style.name }}</a></div>
+
+	{% endfor %}
+
+	</body>
+</html>

@@ -1,3 +1,25 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from fashion.models import EyelessUser
+from django.template.loader import get_template
 
 # Create your views here.
+
+def eyeless_user(request):
+	all_users=EyelessUser.objects.all()
+	return render(request, 'User.html', {'all_users': all_users})
+
+def userview(request, EyelessUser_id):
+	userView = get_object_or_404(EyelessUser, pk=EyelessUser_id)
+	return render(request, 'userView.html', {'userView':userView})
+
+def eyeless_stylist(request):
+	all_style=EyelessStylist.objects.all()
+	return render(request, 'Style.html', {'all_style': all_style})
+
+def eyeless_post(request):
+	all_post=EyelessPost.objects.all()
+	return render(request, 'Post.html', {'all_post': all_post})
+
+def eyeless_message(request):
+	all_messa=EyelessMessage.objects.all()
+	return render(request, 'Message.html', {'all_messa': all_messa})
