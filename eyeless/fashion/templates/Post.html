@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<title>Eyeless Fashion Users</title>
+	</head>
+	<body>
+
+These are the people seeking fashion advice:
+
+	{% for user in all_users %}
+
+		<div><a href="{% url 'userView' user.id %}">{{ user.name }}</a></div>
+
+	{% endfor %}
+
+	</body>
+</html>
